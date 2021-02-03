@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}Class Schedule{% endblock %}
+
+{% block header %}Classes{% endblock %}
+
+{% block content %}
+    <!--iterate through class titles returned from the dictionary -->
+    <ul>
+        {% for class in classes %}
+            <li>{{ class.title }}</li>
+        {% endfor %}
+    </ul>
+
+{% endblock %}

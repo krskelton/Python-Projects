@@ -1,0 +1,33 @@
+{% load static from staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en" class="bg_img">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}{% endblock %}</title>
+        <meta name="viewport" content="width=device-width, inital-clas=1">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}">
+    </head>
+    </head>
+    <body>
+        <div class="page_container">
+            <ul class="topnav">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <header class="header-title">
+                <h1>{% block header %}{% endblock %}</h1>
+            </header>
+            {% block content %}{% endblock %}
+        </div>
+
+        <section id="block-footer">
+            <p id="footer-right"><a href="#">Terms</a> | <a href="#">Privacy</a></p>
+            <p id="footer-left">&copy: 2021 - The Fictional Royal Hotels</p>
+        </section>
+    </body>
+</html>

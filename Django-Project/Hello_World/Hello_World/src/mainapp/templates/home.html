@@ -1,0 +1,16 @@
+
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block header %}Welcome to my site!{% endblock %}
+
+{% block content %}
+<!--    <h1>Welcome to my world, {{user | title}}!</h1>-->
+
+    <ul>
+    {% for profile in profiles %}
+        <li>{{profile.firstName}}</li>
+    {% endfor %}
+    </ul>
+{% endblock %}
